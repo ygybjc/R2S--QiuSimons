@@ -290,6 +290,9 @@ popd
 #UPNP（回滚以解决某些沙雕设备的沙雕问题
 rm -rf ./feeds/packages/net/miniupnpd
 svn co https://github.com/coolsnowwolf/packages/trunk/net/miniupnpd feeds/packages/net/miniupnpd
+#KMS
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-vlmcsd package/lean/luci-app-vlmcsd
+svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/vlmcsd package/lean/vlmcsd
 #frp
 rm -f ./feeds/luci/applications/luci-app-frps
 rm -f ./feeds/luci/applications/luci-app-frpc

@@ -167,7 +167,7 @@ git clone -b master --single-branch https://github.com/NateLol/luci-app-oled pac
 #网易云解锁
 git clone https://github.com/project-openwrt/luci-app-unblockneteasemusic package/new/UnblockNeteaseMusic
 pushd package/new/UnblockNeteaseMusic
-git checkout v2.8-6
+git checkout 3e669ff
 popd
 #定时重启
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/luci-app-autoreboot package/lean/luci-app-autoreboot

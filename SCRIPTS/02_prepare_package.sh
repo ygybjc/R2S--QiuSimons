@@ -1,6 +1,11 @@
 #!/bin/bash
 clear
 
+#blocktrron.git 
+patch -p1 < ../PATCH/new/main/exp/rockchip-fix-NanoPi-R2S-PHY-ID.patch
+patch -p1 < ../PATCH/new/main/exp/Revert-uboot-rockchip-update-NanoPi-R2S-patches.patch
+patch -p1 < ../PATCH/new/main/exp/rockchip-enable-Realtek-PHY-support.patch
+
 #Kernel
 #cp -f ../PATCH/new/main/xanmod_5.4.patch ./target/linux/generic/hack-5.4/000-xanmod_5.4.patch
 wget -O- https://patch-diff.githubusercontent.com/raw/openwrt/openwrt/pull/3178.patch | patch -p1
@@ -26,8 +31,6 @@ patch -p1 < ../PATCH/new/main/Support-hardware-random-number-generator-for-RK332
 
 #Crypto（test
 #wget -O- https://github.com/AmadeusGhost/lede/commit/3e668936669080ca6f3fcea5534b94d00103291a.patch | patch -p1
-
-patch -p1 < ../PATCH/new/main/rockchip-fix-NanoPi-R2S-PHY-ID.patch
 
 ##准备工作
 #回滚FW3

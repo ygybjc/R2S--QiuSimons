@@ -2,9 +2,9 @@
 clear
 
 #blocktrron.git 
-patch -p1 < ../PATCH/new/main/exp/rockchip-fix-NanoPi-R2S-PHY-ID.patch
-patch -p1 < ../PATCH/new/main/exp/Revert-uboot-rockchip-update-NanoPi-R2S-patches.patch
-patch -p1 < ../PATCH/new/main/exp/rockchip-enable-Realtek-PHY-support.patch
+#patch -p1 < ../PATCH/new/main/exp/rockchip-fix-NanoPi-R2S-PHY-ID.patch
+#patch -p1 < ../PATCH/new/main/exp/Revert-uboot-rockchip-update-NanoPi-R2S-patches.patch
+#patch -p1 < ../PATCH/new/main/exp/rockchip-enable-Realtek-PHY-support.patch
 
 #Kernel
 #cp -f ../PATCH/new/main/xanmod_5.4.patch ./target/linux/generic/hack-5.4/000-xanmod_5.4.patch

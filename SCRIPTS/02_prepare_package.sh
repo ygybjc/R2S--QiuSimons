@@ -56,7 +56,7 @@ sed -i 's/-f/-f -i/g' feeds/packages/utils/rng-tools/files/rngd.init
 
 ##必要的patch
 #fix sd
-cp -f ../PATCH/new/main/101-rockchip-rk3328-nanopi-r2s-improve-boot-failed.patch ./package/boot/uboot-rockchip/patches/101-rockchip-rk3328-nanopi-r2s-improve-boot-failed.patch
+#cp -f ../PATCH/new/main/101-rockchip-rk3328-nanopi-r2s-improve-boot-failed.patch ./package/boot/uboot-rockchip/patches/101-rockchip-rk3328-nanopi-r2s-improve-boot-failed.patch
 #patch i2c0
 cp -f ../PATCH/new/main/998-rockchip-enable-i2c0-on-NanoPi-R2S.patch ./target/linux/rockchip/patches-5.4/998-rockchip-enable-i2c0-on-NanoPi-R2S.patch
 #patch rk-crypto

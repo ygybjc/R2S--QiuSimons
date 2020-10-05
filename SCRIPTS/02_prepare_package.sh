@@ -6,10 +6,14 @@ clear
 #patch -p1 < ../PATCH/new/main/exp/Revert-uboot-rockchip-update-NanoPi-R2S-patches.patch
 #patch -p1 < ../PATCH/new/main/exp/rockchip-enable-Realtek-PHY-support.patch
 
+#fix sd
+wget -O- https://patch-diff.githubusercontent.com/raw/openwrt/openwrt/pull/3277.patch | patch -p1
+
+#update r8152 driver
+wget -O- https://patch-diff.githubusercontent.com/raw/openwrt/openwrt/pull/3178.patch | patch -p1
+
 #Kernel
 #cp -f ../PATCH/new/main/xanmod_5.4.patch ./target/linux/generic/hack-5.4/000-xanmod_5.4.patch
-wget -O- https://patch-diff.githubusercontent.com/raw/openwrt/openwrt/pull/3178.patch | patch -p1
-#wget -O- https://patch-diff.githubusercontent.com/raw/openwrt/openwrt/pull/3389.patch | patch -p1
 
 notExce(){ 
 #RT Kernel

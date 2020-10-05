@@ -2,12 +2,8 @@
 clear
 
 #blocktrron.git 
-#patch -p1 < ../PATCH/new/main/exp/rockchip-fix-NanoPi-R2S-PHY-ID.patch
-#patch -p1 < ../PATCH/new/main/exp/Revert-uboot-rockchip-update-NanoPi-R2S-patches.patch
-#patch -p1 < ../PATCH/new/main/exp/rockchip-enable-Realtek-PHY-support.patch
-
-#fix sd
-wget -O- https://patch-diff.githubusercontent.com/raw/openwrt/openwrt/pull/3277.patch | patch -p1
+patch -p1 < ../PATCH/new/main/exp/uboot-rockchip-update-to-v2020.10-rc5.patch
+patch -p1 < ../PATCH/new/main/exp/rockchip-fix-NanoPi-R2S-GMAC-clock-name.patch
 
 #update r8152 driver
 wget -O- https://patch-diff.githubusercontent.com/raw/openwrt/openwrt/pull/3178.patch | patch -p1
@@ -59,9 +55,8 @@ sed -i 's/O2/O2/g' ./rules.mk
 sed -i 's/-f/-f -i/g' feeds/packages/utils/rng-tools/files/rngd.init
 
 ##必要的patch
-#等待上游修复后使用
 #fix sd
-#cp -f ../PATCH/new/main/997-nanopi-r2s-improve-boot-failed.patch ./package/boot/uboot-rockchip/patches/997-nanopi-r2s-improve-boot-failed.patch
+cp -f ../PATCH/new/main/101-rockchip-rk3328-nanopi-r2s-improve-boot-failed.patch ./package/boot/uboot-rockchip/patches/101-rockchip-rk3328-nanopi-r2s-improve-boot-failed.patch
 #patch i2c0
 cp -f ../PATCH/new/main/998-rockchip-enable-i2c0-on-NanoPi-R2S.patch ./target/linux/rockchip/patches-5.4/998-rockchip-enable-i2c0-on-NanoPi-R2S.patch
 #patch rk-crypto

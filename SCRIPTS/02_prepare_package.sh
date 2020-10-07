@@ -103,6 +103,8 @@ sed -i 's,"eth1" "eth0","eth0" "eth1",g' target/linux/rockchip/armv8/base-files/
 sed -i "s,'eth1' 'eth0','eth0' 'eth1',g" target/linux/rockchip/armv8/base-files/etc/board.d/02_network
 
 ##获取额外package
+#luci-app-compressed-memory
+wget -O- https://github.com/openwrt/openwrt/compare/3f5cf3...NoTengoBattery:master.patch | patch -p1
 #更换cryptodev-linux
 rm -rf ./package/kernel/cryptodev-linux
 svn co https://github.com/project-openwrt/openwrt/trunk/package/kernel/cryptodev-linux package/kernel/cryptodev-linux

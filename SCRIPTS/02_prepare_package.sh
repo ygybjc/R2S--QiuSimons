@@ -342,6 +342,9 @@ CONFIG_CRYPTO_SIMD=y
 # CONFIG_CRYPTO_SM4_ARM64_CE is not set
 ' >> ./target/linux/rockchip/armv8/config-5.4
 
+#let trojan prefer chacha20(vssr,passwall,ssrp
+patch -p1 < ../PATCH/new/main/chacha.patch
+
 #disable-rk3328-eth-offloading
 #wget -P target/linux/rockchip/armv8/base-files/etc/hotplug.d/iface https://raw.githubusercontent.com/friendlyarm/friendlywrt/master-v19.07.1/target/linux/rockchip-rk3328/base-files/etc/hotplug.d/iface/12-disable-rk3328-eth-offloading
 

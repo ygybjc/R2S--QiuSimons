@@ -129,6 +129,9 @@ rm -rf ./feeds/packages/lang/node-serialport
 svn co https://github.com/nxhack/openwrt-node-packages/trunk/node-serialport feeds/packages/lang/node-serialport
 rm -rf ./feeds/packages/lang/node-serialport-bindings
 svn co https://github.com/nxhack/openwrt-node-packages/trunk/node-serialport-bindings feeds/packages/lang/node-serialport-bindings
+#更换libcap
+rm -rf ./feeds/packages/libs/libcap/
+svn co https://github.com/openwrt/packages/trunk/libs/libcap feeds/packages/libs/libcap
 #更换GCC版本
 rm -rf ./feeds/packages/devel/gcc
 svn co https://github.com/openwrt/packages/trunk/devel/gcc feeds/packages/devel/gcc

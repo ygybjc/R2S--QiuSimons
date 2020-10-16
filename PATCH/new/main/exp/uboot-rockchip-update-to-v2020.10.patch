@@ -1,7 +1,7 @@
-From a2b2fc84a30e3d80c5ccc2e721148e72b69575f7 Mon Sep 17 00:00:00 2001
+From fb6ee0c112a4b707eaaa1d0d6154f936173fc63a Mon Sep 17 00:00:00 2001
 From: David Bauer <mail@david-bauer.net>
 Date: Sun, 4 Oct 2020 23:55:54 +0200
-Subject: [PATCH] uboot-rockchip: update to v2020.10-rc5
+Subject: [PATCH] uboot-rockchip: update to v2020.10
 
 Update to the latest U-Boot release. Refresh patches for the NanoPi R2S
 to include the latest DTS accepted Linux upstream.
@@ -15,7 +15,7 @@ Signed-off-by: David Bauer <mail@david-bauer.net>
  4 files changed, 228 insertions(+), 168 deletions(-)
 
 diff --git a/package/boot/uboot-rockchip/Makefile b/package/boot/uboot-rockchip/Makefile
-index 944c942efc..e1c56d0728 100644
+index 944c942efc..74bb72be49 100644
 --- a/package/boot/uboot-rockchip/Makefile
 +++ b/package/boot/uboot-rockchip/Makefile
 @@ -5,10 +5,10 @@
@@ -24,11 +24,11 @@ index 944c942efc..e1c56d0728 100644
  
 -PKG_VERSION:=2020.07
 -PKG_RELEASE:=3
-+PKG_VERSION:=2020.10-rc5
++PKG_VERSION:=2020.10
 +PKG_RELEASE:=1
  
 -PKG_HASH:=c1f5bf9ee6bb6e648edbf19ce2ca9452f614b08a9f886f1a566aa42e8cf05f6a
-+PKG_HASH:=3eec733354b8f7b21ce4148bd8cf79feffe57f3d08fe9f3ede0f162b2600dc90
++PKG_HASH:=0d481bbdc05c0ee74908ec2f56a6daa53166cc6a78a0e4fac2ac5d025770a622
  
  PKG_MAINTAINER:=Tobias Maedel <openwrt@tbspace.de>
  

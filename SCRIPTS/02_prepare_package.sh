@@ -2,7 +2,7 @@
 clear
 
 #blocktrron.git 
-patch -p1 < ../PATCH/new/main/exp/uboot-rockchip-update-to-v2020.10-rc5.patch
+patch -p1 < ../PATCH/new/main/exp/uboot-rockchip-update-to-v2020.10.patch
 patch -p1 < ../PATCH/new/main/exp/rockchip-fix-NanoPi-R2S-GMAC-clock-name.patch
 
 #update r8152 driver

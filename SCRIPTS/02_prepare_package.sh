@@ -108,6 +108,8 @@ wget -O- https://patch-diff.githubusercontent.com/raw/openwrt/openwrt/pull/2840.
 mkdir ./package/new
 cp -rf ../NoTengoBattery/feeds/luci/applications/luci-app-compressed-memory ./package/new/luci-app-compressed-memory
 sed -i 's,include ../..,include $(TOPDIR)/feeds/luci,g' ./package/new/luci-app-compressed-memory/Makefile
+rm -rf ./package/system/compressed-memory
+cp -rf ../NoTengoBattery/package/system/compressed-memory ./package/system/compressed-memory
 #更换cryptodev-linux
 rm -rf ./package/kernel/cryptodev-linux
 svn co https://github.com/project-openwrt/openwrt/trunk/package/kernel/cryptodev-linux package/kernel/cryptodev-linux

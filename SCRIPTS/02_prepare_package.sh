@@ -274,7 +274,7 @@ svn co https://github.com/openwrt/openwrt/branches/openwrt-19.07/package/network
 #sed -i 's,include ../..,include $(TOPDIR)/feeds/luci,g' ./package/new/luci-app-smartdns/Makefile
 #rm -rf ./package/new/luci-app-smartdns/htdocs/luci-static/resources/view/smartdns/smartdns.js
 #wget -P package/new/luci-app-smartdns/htdocs/luci-static/resources/view/smartdns https://github.com/pymumu/smartdns/blob/master/package/luci/files/root/www/luci-static/resources/view/smartdns/smartdns.js
-cp -rf ../packages-lienol/package/net/smartdns ./package/new/smartdns
+cp -rf ../packages-lienol/net/smartdns ./package/new/smartdns
 cp -rf ../luci-lienol/applications/luci-app-smartdns ./package/new/luci-app-smartdns
 sed -i 's,include ../..,include $(TOPDIR)/feeds/luci,g' ./package/new/luci-app-smartdns/Makefile
 

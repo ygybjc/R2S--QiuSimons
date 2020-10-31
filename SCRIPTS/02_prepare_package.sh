@@ -283,12 +283,12 @@ git clone -b master --single-branch https://github.com/destan19/OpenAppFilter pa
 #Docker
 svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
 svn co https://github.com/lisaac/luci-lib-docker/trunk/collections/luci-lib-docker package/luci-lib-docker
-svn co https://github.com/openwrt/packages/trunk/utils/docker-ce package/utils/docker-ce
-svn co https://github.com/openwrt/packages/trunk/utils/cgroupfs-mount package/utils/cgroupfs-mount
-svn co https://github.com/openwrt/packages/trunk/utils/containerd package/utils/containerd
-svn co https://github.com/openwrt/packages/trunk/utils/libnetwork package/utils/libnetwork
-svn co https://github.com/openwrt/packages/trunk/utils/tini package/utils/tini
-svn co https://github.com/openwrt/packages/trunk/utils/runc package/utils/runc
+svn co https://github.com/openwrt/packages/trunk/utils/docker-ce feeds/package/utils/docker-ce
+svn co https://github.com/openwrt/packages/trunk/utils/cgroupfs-mount feeds/package/utils/cgroupfs-mount
+svn co https://github.com/openwrt/packages/trunk/utils/containerd feeds/package/utils/containerd
+svn co https://github.com/openwrt/packages/trunk/utils/libnetwork feeds/package/utils/libnetwork
+svn co https://github.com/openwrt/packages/trunk/utils/tini feeds/package/utils/tini
+svn co https://github.com/openwrt/packages/trunk/utils/runc feeds/package/utils/runc
 #补全部分依赖（实际上并不会用到
 svn co https://github.com/openwrt/openwrt/branches/openwrt-19.07/package/utils/fuse package/utils/fuse
 svn co https://github.com/openwrt/openwrt/branches/openwrt-19.07/package/network/services/samba36 package/network/services/samba36

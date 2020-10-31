@@ -116,7 +116,7 @@ svn co https://github.com/project-openwrt/openwrt/trunk/package/kernel/cryptodev
 #更换curl
 rm -rf ./package/network/utils/curl
 svn co https://github.com/openwrt/packages/trunk/net/curl feeds/packages/network/utils/curl
-ln -sf ./feeds/packages/network/utils/curl ./package/feeds/packages/curl
+ln -sf ../../../feeds/packages/network/utils/curl ./package/feeds/packages/curl
 #更换Node版本
 rm -rf ./feeds/packages/lang/node
 svn co https://github.com/nxhack/openwrt-node-packages/trunk/node feeds/packages/lang/node
@@ -285,17 +285,25 @@ git clone -b master --single-branch https://github.com/destan19/OpenAppFilter pa
 svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
 svn co https://github.com/lisaac/luci-lib-docker/trunk/collections/luci-lib-docker package/luci-lib-docker
 svn co https://github.com/openwrt/packages/trunk/utils/docker-ce feeds/packages/utils/docker-ce
+ln -sf ../../../feeds/packages/utils/docker-ce ./package/feeds/packages/docker-ce
 svn co https://github.com/openwrt/packages/trunk/utils/cgroupfs-mount feeds/packages/utils/cgroupfs-mount
+ln -sf ../../../feeds/packages/utils/cgroupfs-mount ./package/feeds/packages/cgroupfs-mount
 svn co https://github.com/openwrt/packages/trunk/utils/containerd feeds/packages/utils/containerd
+ln -sf ../../../feeds/packages/utils/containerd ./package/feeds/packages/containerd
 svn co https://github.com/openwrt/packages/trunk/utils/libnetwork feeds/packages/utils/libnetwork
+ln -sf ../../../feeds/packages/utils/libnetwork ./package/feeds/packages/libnetwork
 svn co https://github.com/openwrt/packages/trunk/utils/tini feeds/packages/utils/tini
+ln -sf ../../../feeds/packages/utils/tini ./package/feeds/packages/tini
 svn co https://github.com/openwrt/packages/trunk/utils/runc feeds/packages/utils/runc
+ln -sf ../../../feeds/packages/utils/runc ./package/feeds/packages/runc
 #补全部分依赖（实际上并不会用到
 svn co https://github.com/openwrt/openwrt/branches/openwrt-19.07/package/utils/fuse package/utils/fuse
 svn co https://github.com/openwrt/openwrt/branches/openwrt-19.07/package/network/services/samba36 package/network/services/samba36
 svn co https://github.com/openwrt/openwrt/branches/openwrt-19.07/package/libs/libconfig package/libs/libconfig
 svn co https://github.com/openwrt/packages/trunk/libs/nghttp2 feeds/packages/libs/nghttp2
+ln -sf ../../../feeds/packages/libs/nghttp2 ./package/feeds/packages/nghttp2
 svn co https://github.com/openwrt/packages/trunk/libs/libcap-ng feeds/packages/libs/libcap-ng
+ln -sf ../../../feeds/packages/libs/libcap-ng ./package/feeds/packages/libcap-ng
 rm -rf ./feeds/packages/utils/collectd
 svn co https://github.com/openwrt/packages/trunk/utils/collectd feeds/packages/utils/collectd
 #FullCone模块

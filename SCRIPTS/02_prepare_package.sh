@@ -48,7 +48,7 @@ sed -i 's,snapshots,,g' package/base-files/image-config.in
 sed -i 's/Os/O2/g' include/target.mk
 sed -i 's/O2/O2/g' ./rules.mk
 #更新feed
-./scripts/feeds update -a && ./scripts/feeds install -a
+./scripts/feeds update -a
 #irqbalance
 #sed -i 's/0/1/g' feeds/packages/utils/irqbalance/files/irqbalance.config
 #RNGD
@@ -375,5 +375,6 @@ sed -i 's/16384/65536/g' package/kernel/linux/files/sysctl-nf-conntrack.conf
 rm -rf .config
 #授予权限
 chmod -R 755 ./
+./scripts/feeds install -a
 
 exit 0

@@ -48,7 +48,7 @@ sed -i 's,snapshots,,g' package/base-files/image-config.in
 sed -i 's/Os/O2/g' include/target.mk
 sed -i 's/O2/O2/g' ./rules.mk
 #更新feed
-./scripts/feeds update -a
+./scripts/feeds update -a && ./scripts/feeds install -a
 #irqbalance
 #sed -i 's/0/1/g' feeds/packages/utils/irqbalance/files/irqbalance.config
 #RNGD
@@ -116,6 +116,7 @@ svn co https://github.com/project-openwrt/openwrt/trunk/package/kernel/cryptodev
 #更换curl
 rm -rf ./package/network/utils/curl
 svn co https://github.com/openwrt/packages/trunk/net/curl feeds/package/network/utils/curl
+ln -sf ./feeds/package/network/utils/curl ./package/feeds/package/curl
 #更换Node版本
 rm -rf ./feeds/packages/lang/node
 svn co https://github.com/nxhack/openwrt-node-packages/trunk/node feeds/packages/lang/node
@@ -375,6 +376,5 @@ sed -i 's/16384/65536/g' package/kernel/linux/files/sysctl-nf-conntrack.conf
 rm -rf .config
 #授予权限
 chmod -R 755 ./
-./scripts/feeds install -a
 
 exit 0

@@ -284,18 +284,18 @@ git clone -b master --single-branch https://github.com/destan19/OpenAppFilter pa
 #Docker
 svn co https://github.com/lisaac/luci-app-dockerman/trunk/applications/luci-app-dockerman package/luci-app-dockerman
 svn co https://github.com/lisaac/luci-lib-docker/trunk/collections/luci-lib-docker package/luci-lib-docker
-svn co https://github.com/openwrt/packages/trunk/utils/docker-ce feeds/package/utils/docker-ce
-svn co https://github.com/openwrt/packages/trunk/utils/cgroupfs-mount feeds/package/utils/cgroupfs-mount
-svn co https://github.com/openwrt/packages/trunk/utils/containerd feeds/package/utils/containerd
-svn co https://github.com/openwrt/packages/trunk/utils/libnetwork feeds/package/utils/libnetwork
-svn co https://github.com/openwrt/packages/trunk/utils/tini feeds/package/utils/tini
-svn co https://github.com/openwrt/packages/trunk/utils/runc feeds/package/utils/runc
+svn co https://github.com/openwrt/packages/trunk/utils/docker-ce feeds/packages/utils/docker-ce
+svn co https://github.com/openwrt/packages/trunk/utils/cgroupfs-mount feeds/packages/utils/cgroupfs-mount
+svn co https://github.com/openwrt/packages/trunk/utils/containerd feeds/packages/utils/containerd
+svn co https://github.com/openwrt/packages/trunk/utils/libnetwork feeds/packages/utils/libnetwork
+svn co https://github.com/openwrt/packages/trunk/utils/tini feeds/packages/utils/tini
+svn co https://github.com/openwrt/packages/trunk/utils/runc feeds/packages/utils/runc
 #补全部分依赖（实际上并不会用到
 svn co https://github.com/openwrt/openwrt/branches/openwrt-19.07/package/utils/fuse package/utils/fuse
 svn co https://github.com/openwrt/openwrt/branches/openwrt-19.07/package/network/services/samba36 package/network/services/samba36
 svn co https://github.com/openwrt/openwrt/branches/openwrt-19.07/package/libs/libconfig package/libs/libconfig
-svn co https://github.com/openwrt/packages/trunk/libs/nghttp2 feeds/package/libs/nghttp2
-svn co https://github.com/openwrt/packages/trunk/libs/libcap-ng feeds/package/libs/libcap-ng
+svn co https://github.com/openwrt/packages/trunk/libs/nghttp2 feeds/packages/libs/nghttp2
+svn co https://github.com/openwrt/packages/trunk/libs/libcap-ng feeds/packages/libs/libcap-ng
 rm -rf ./feeds/packages/utils/collectd
 svn co https://github.com/openwrt/packages/trunk/utils/collectd feeds/packages/utils/collectd
 #FullCone模块

@@ -115,8 +115,8 @@ rm -rf ./package/kernel/cryptodev-linux
 svn co https://github.com/project-openwrt/openwrt/trunk/package/kernel/cryptodev-linux package/kernel/cryptodev-linux
 #更换curl
 rm -rf ./package/network/utils/curl
-svn co https://github.com/openwrt/packages/trunk/net/curl feeds/package/network/utils/curl
-ln -sf ./feeds/package/network/utils/curl ./package/feeds/package/curl
+svn co https://github.com/openwrt/packages/trunk/net/curl feeds/packages/network/utils/curl
+ln -sf ./feeds/packages/network/utils/curl ./package/feeds/packages/curl
 #更换Node版本
 rm -rf ./feeds/packages/lang/node
 svn co https://github.com/nxhack/openwrt-node-packages/trunk/node feeds/packages/lang/node
